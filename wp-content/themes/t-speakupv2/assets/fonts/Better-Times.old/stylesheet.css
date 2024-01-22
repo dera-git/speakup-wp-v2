@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Better Times';
+    src: url('BetterTimes.woff2') format('woff2'),
+        url('BetterTimes.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Better Times Swash';
+    src: url('BetterTimesSwash.woff2') format('woff2'),
+        url('BetterTimesSwash.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Better Times Alt';
+    src: url('BetterTimesAlt.woff2') format('woff2'),
+        url('BetterTimesAlt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

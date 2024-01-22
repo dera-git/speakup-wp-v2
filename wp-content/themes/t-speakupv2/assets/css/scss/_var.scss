@@ -1,0 +1,210 @@
+//Font familly
+$primary: 'Spartan', sans-serif;
+$secondary: 'Better Times', serif;
+$primary-mb: 'Spartan MB';
+
+//font weight
+$extra_bold: 900;
+$bold: 700;
+$semi_bold: 600;
+$medium: 500;
+$regular: 400;
+$light: 300;
+
+//color
+$black: #000000;
+$white: #ffffff;
+$beige: #F1EDE9;
+$red: #DD3E14;
+$orange: #BE7033;
+$orange-light: #DCAF70;
+$orange-primary: #925C26;
+$orange-secondary: #DA7021;
+$orange-tertiary: #CB6B45;
+$orange-fourth: #B06D40;
+$orange-fifth: #C05E43;
+$orange-sixth: #D08719;
+$orange-seventh: #D6924E;
+$green-primary: #73A842;
+$green-secondary: #33657E;
+$green-tertiary: #7BB8BF;
+$brown-primary: #9F774F;
+$brown-secondary: #74513E;
+$brown-tertiary: #A2A183;
+$brown-fourth: #A48A67;
+$purple: #8C79A4;
+$purple_primary: #4B02A8;
+$purple_secondary: #8B32B4;
+$purple_tertiary: #4901A8;
+$red_primary: #F25057;
+$marron: #826C5F;
+
+$i: #DA7021;
+$d: #DCAF70;
+$e: #925C26;
+$a: #7BB8BF;
+$s: #73A842;
+
+// font-familly
+$font_familly: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "primary-mb": $primary-mb,
+);
+
+//theme color class
+$theme_colors: (
+        "black": $black,
+        "white": $white,
+        "beige": $beige,
+        "red": $red,
+        "orange": $orange,
+        "orange-light": $orange-light,
+        "orange-primary": $orange-primary,
+        "orange-secondary": $orange-secondary,
+        "orange-tertiary": $orange-tertiary,
+        "orange-fourth": $orange-fourth,
+        "orange-fifth": $orange-fifth,
+        "orange-sixth": $orange-sixth,
+        "orange-seventh": $orange-seventh,
+        "green-primary": $green-primary,
+        "green-secondary": $green-secondary,
+        "green-tertiary": $green-tertiary,
+        "purple": $purple,
+        "brown-secondary": $brown-secondary,
+        "brown-tertiary": $brown-tertiary,
+        "brown-fourth": $brown-fourth,
+        "i": $i,
+        "d": $d,
+        "e": $e,
+        "a": $a,
+        "s": $s,
+        "purple-primary": $purple_primary,
+        "purple-secondary": $purple_secondary,
+        "purple-tertiary": $purple_tertiary,
+        "red-primary": $red_primary,
+        "marron": $marron,
+);
+
+//font-weight
+$font_weight: (
+        "extra-bold": $extra_bold,
+        "bold": $bold,
+        "semi-bold": $semi_bold,
+        "medium": $medium,
+        "regular": $regular,
+        "light": $light,
+);
+
+//max value
+$max_value: (
+        "none": none,
+        "41": 41px,
+        "165": 165px,
+        "180": 180px,
+        "230": 230px,
+        "238": 238px,
+        "240": 240px,
+        "260": 260px,
+        "270": 270px,
+        "305": 305px,
+        "345": 345px,
+        "365": 365px,
+        "380": 380px,
+        "488": 488px,
+        "520": 520px,
+        "555": 555px,
+        "650": 650px,
+        "735": 735px,
+        "966": 966px,
+);
+
+//z-index
+$z_index: (
+        "-1": -1,
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "12": 12,
+);
+
+//Opacity
+$opacity: (
+        "0_7": 0.7,
+        "1": 1,
+);
+
+//line-height value
+$line_height_value: (
+  "1": 1,
+  "0_8": 0.8,
+  "1_1": 1.1,
+  "1_2": 1.2,
+  "1_4": 1.4,
+  "1_3": 1.3,
+  "1_5": 1.5,
+);
+
+// animation delay
+$animation_delay: (
+  "0" : 0,
+  "01" : 0.1,
+  "02" : 0.2,
+  "03" : 0.3,
+  "04" : 0.4,
+  "05" : 0.5,
+  "06" : 0.6,
+  "07" : 0.7,
+  "08" : 0.8,
+  "09" : 0.9,
+  "1" : 1,
+);
+
+//grid breakpoint bootstrap
+$grid-breakpoints: (
+    xs: 0,
+    xs_375: 375.98px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl_1366: 1366px,
+    xxl: 1400px,
+    xxl_1600: 1600px,
+    xxl_1920: 1920px,
+);
+
+$gutters_space_row : (
+        "0": 0px,
+        "10": 10px,
+        "15": 15px,
+        "17": 17px,
+        "20": 20px,
+        "25": 25px,
+        "30": 30px,
+        "35": 35px,
+        "39": 39px,
+        "40": 40px,
+        "45": 45px,
+        "48": 48px,
+        "50": 50px,
+        "55": 55px,
+        "60": 60px,
+        "65": 65px,
+        "70": 70px,
+        "80": 80px,
+        "85": 85px,
+        "95": 95px,
+);
+
+$sides-direction: (
+        "t": top,
+        "b": bottom,
+        "s": left,
+        "e": right);
+
+//bs breakpoint  custom gutter
+$bs-breakpoints: (xs_375: 375.98px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl_1600: 1600px);

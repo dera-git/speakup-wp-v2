@@ -1,0 +1,246 @@
+.kl-section-detail-offre{
+    padding-bottom: 62px;
+    margin-top: -50px;
+    z-index: 1;
+}
+.kl-icon-svg-offre{
+    position: relative;
+    top: -2px;
+}
+.kl-desc-detail-offer{
+    a{
+        color: $black;
+        text-decoration: underline;
+        transition: color .25s;
+        &:hover{
+            color: $orange-seventh;
+        }
+    }
+}
+.kl-btn-to-apply{
+    font-size: 14px;
+    padding: 18px 10px 12px;
+}
+.kl-content-details-offer{
+    padding: 58px 50px 43px;
+    @include media-breakpoint-down(sm){
+        padding: 58px 15px 43px;
+    }
+}
+.kl-details-offer-item{
+    & + .kl-details-offer-item{
+        margin-top: 55px;
+    }
+}
+.kl-section-form-offer{
+    padding-bottom: 260px;
+    padding-top: 100px;
+    margin-top: -100px;
+    background: #E1DAD4;
+    position: relative;
+    @include media-breakpoint-down(md){
+        padding-bottom: 160px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background: url('../img/bg-form-offer.svg') no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 260px;
+        top: -250px;
+        left: 0;
+        z-index: -1;
+    }
+}
+.kl-form-single-offer{
+    .gform_heading{
+        display: none !important;
+    }
+    .gfield.gfield--type-hidden{
+        width: 100% !important;
+    }
+    .gform_fields{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px 30px;
+        @include media-breakpoint-down(md){
+            flex-direction: column;
+        }
+        .gfield--width-half{
+            flex: 0 0 auto;
+            width: calc(50% - 15px);
+            @include media-breakpoint-down(md){
+                width: 100%;
+            }
+        }
+    }
+    .kl-form-control{
+        margin-bottom: 0;
+        .gfield_required{
+            display: none !important;
+        }
+        .ginput_container input{
+            color: $black !important;
+        }
+        .gfield_label{
+            font-weight: $semi_bold;
+        }
+        .gfield_validation_message{
+            bottom: -8px;
+        }
+    }
+    input[type="submit"]{
+        @extend .kl-btn-theme02;
+        width: 100%;
+        padding: 18px 10px 12px;
+    }
+    .gform_footer{
+        width: 166px;
+        margin: 62px auto 0;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background: $black;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: scaleX(1);
+            transition: transform 0.3s ease-in-out;
+        }
+        &:hover{
+            &::before{
+                transform: scaleX(1.065);
+            }
+        }
+    }
+    .gform_ajax_spinner{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+    }
+    .gform_validation_errors{
+        background-color: $white;
+        border: 1px solid $red;
+        border-radius: 0.25rem;
+        color: $red;
+        margin: 0 auto 30px;
+        padding: 0.75rem 1.25rem;
+        text-align: center;
+        max-width: 434px;
+        .gform_submission_error {
+            font-size: 12px;
+        }
+    }
+    .ginput_container_fileupload{
+        display: flex;
+        flex-direction: column
+    }
+    .gform_fileupload_rules{
+        font-size: 12px;
+        position: absolute;
+        bottom: -30px;
+        left: 0
+    }
+    .gform_confirmation_message{
+        text-align: center;
+        color: $orange-seventh !important;
+        font-weight: $semi_bold;
+        font-size: 16px;
+        @include media-breakpoint-down(sm){
+            font-size: 14px
+        }
+    }
+}
+.kl-input-file{
+    label{
+        @extend .kl-form-label;
+        font-weight: $semi_bold;
+        position: relative;
+        bottom: 0;
+        margin-bottom: 12px;
+    }
+    .gfield_required,
+    .gfield_fileupload_percent{
+        display: none !important;
+    }
+    .gform_delete_file{
+        margin-left: 10px;
+        @include media-breakpoint-down(sm){
+            margin-left: 2px;
+        }
+    }
+    .gfield_validation_message{
+        font-size: 10px;
+        color: $red;
+        position: relative;
+        top: 35px;
+    }
+    .ginput_container_fileupload{
+        background-color: rgba($white, 0.67);
+        position: relative;
+        padding: 8px;
+        .gfield_validation_message{
+            position: absolute;
+            top: 85px;
+        }
+    }
+    input[type=file]::file-selector-button {
+        background-color: #EDEAE7;
+        color: $black;
+        font-size: 14px;
+        border: 0px;
+        border-right: none;
+        padding: 6px 15px 4px;
+        margin-right: 20px;
+        transition: .5s;
+    }
+    .ginput_preview_list{
+        position: absolute;
+        left: 177px;
+        background-color: #f5f3f1;
+        width: calc(100% - 190px);
+        top: 50%;
+        transform: translateY(-50%);
+        @include media-breakpoint-down(sm){
+            width: 55%;
+        }
+        @include media-breakpoint-down(xs_375){
+            width: 47%;
+        }
+        @media (max-width: 320.98px){
+            width: 38%;
+        }
+        @-moz-document url-prefix(){
+            left: 128px;
+            @include media-breakpoint-down(sm){
+                width:60%;
+            }
+            @media (max-width: 320.98px){
+                width: 54%;
+            }
+        }
+        .ginput_preview{
+            @include media-breakpoint-down(sm){
+                display: flex;
+            }
+        }
+        .gfield_fileupload_filename{
+            @include media-breakpoint-down(sm){
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 180px;
+            }
+            @include media-breakpoint-down(xs_375){
+                width: 139px;
+            }
+            @media (max-width: 320.98px){
+                width: 127px;
+            }
+        }
+    }
+}

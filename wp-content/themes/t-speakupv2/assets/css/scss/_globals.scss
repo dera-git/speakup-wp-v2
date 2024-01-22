@@ -1,0 +1,310 @@
+body {
+  font-family: $primary;
+  font-size: 14px;
+  font-weight: $regular;
+  color: $black;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, p, ul{
+  margin-bottom: 0;
+}
+a{
+  text-decoration: none;
+}
+a, button, input{
+  &:focus{
+    outline: none;
+  }
+}
+.kl-img-cover{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.kl-flex-auto{
+  flex: 0 0 auto;
+}
+
+//bg-color
+@each $color, $value in $theme_colors {
+  .kl-bg-#{$color} {
+    @include bg_variant($value);
+    &.kl-btn-theme02:before{
+      @include bg_variant($value);
+    }
+  }
+}
+
+//color
+@each $color, $value in $theme_colors {
+  .kl-color-#{$color} {
+    @include color_variant($value);
+    a{
+      @include color_variant($value);
+    }
+  }
+}
+
+//font weight
+@each $name, $value in $font_weight {
+  .kl-fw-#{$name} {
+    @include font_weight($value);
+    h1, h2, h3{
+      @include font_weight($value);
+    }
+  }
+}
+
+//font familly
+@each $name, $value in $font_familly {
+  .kl-ff-#{$name} {
+    @include font_familly($value);
+  }
+}
+
+//line-height
+@each $val, $value in $line_height_value {
+  .kl-lh-#{$val} {
+    @include line_height($value);
+    h1, h2, h3, p{
+      @include line_height($value);
+    }
+  }
+}
+
+//z-index
+@each $val, $value in $z_index {
+  .kl-z-index-#{$val} {
+    @include z_index($value);
+  }
+}
+
+//z-index
+@each $val, $value in $opacity {
+  .kl-opacity-#{$val} {
+    @include opacity($value);
+  }
+}
+
+//max width
+
+@each $space, $value_space in $max_value{
+  .kl-max-w-#{$space}{
+    max-width: #{$value_space};
+  }
+  .kl-min-w-#{$space}{
+    min-width: #{$value_space};
+  }
+}
+
+@each $space, $value_space in $gutters_space_row{
+  .kl-gx-#{$space}{
+    --bs-gutter-x: #{$value_space};
+  }
+  .kl-gy-#{$space}{
+    --bs-gutter-y: #{$value_space};
+  }
+  @each $side_value, $side_values in $sides-direction{
+    .kl-m#{$side_value}-#{$space}{
+      margin-#{$side_values}:#{$value_space} !important;
+    }
+    .kl-m#{$side_value}-n-#{$space}{
+      margin-#{$side_values}: -#{$value_space} !important;
+    }
+    .kl-p#{$side_value}-#{$space}{
+      padding-#{$side_values}: #{$value_space} !important;
+    }
+  }
+}
+
+//max-width , space margin padding and gutter breakpoint
+@each $breakpoint in map-keys($bs-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @each $space, $value_space in $max_value{
+      .kl-max-w-#{$breakpoint}-#{$space}{
+        max-width: #{$value_space};
+      }
+    }
+    @each $space, $value_space in $max_value{
+      .kl-min-w-#{$breakpoint}-#{$space}{
+        min-width: #{$value_space};
+      }
+    }
+    @each $space, $value_space in $gutters_space_row{
+      .kl-gx-#{$breakpoint}-#{$space}{
+        --bs-gutter-x: #{$value_space};
+      }
+      .kl-gy-#{$breakpoint}-#{$space}{
+        --bs-gutter-y: #{$value_space};
+      }
+      @each $side_value, $side_values in $sides-direction{
+        .kl-m#{$side_value}-#{$breakpoint}-#{$space}{
+          margin-#{$side_values}: #{$value_space} !important;
+        }
+        .kl-p#{$side_value}-#{$breakpoint}-#{$space}{
+          padding-#{$side_values}: #{$value_space} !important;
+        }
+      }
+    }
+  }
+}
+
+//animation_delay
+@each $animation, $values in $animation_delay{
+  .kl-animation__delay-#{$animation}{
+    animation-delay: #{$values}s !important;
+  }
+}
+
+//card theme
+@each $color, $value in $theme_colors {
+  .kl-hover-card-#{$color}{
+    .kl-icon-eye{
+      border-color: $value;
+      &::before{
+        background: $value;
+      }
+      svg{
+          path{
+              fill: $value;
+          }
+      }
+    }
+    &:hover{
+      .kl-title-card,
+      h3{
+        color: $value;
+      }
+      .kl-icon-eye{
+        &::before{
+            visibility: visible;
+            opacity: 1;
+        }
+        svg{
+            path{
+                fill: $white;
+            }
+        }
+      }
+    }
+  }
+}
+
+//Button theme 
+@each $color, $value in $theme_colors{
+  .kl-form-check{
+    .kl-btn-theme-#{$color}{
+      &::before,
+      &::after{
+        background-color: rgba($value, 0.6);
+      }
+      span{
+        &::before,
+        &::after{
+          border-top: 1px solid rgba($value, 0.6);
+        }
+        &::before{
+          border-left: 1px solid rgba($value, 0.6);
+        }
+        &::after{
+          border-right: 1px solid rgba($value, 0.6);
+        }
+      }
+    }
+  }
+}
+
+// container
+@include media-breakpoint-up(xl){
+  .kl-container-xl-1164{
+    max-width: 1164px;
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .kl-container-xl-940{
+    max-width: 940px;
+  }
+}
+
+.kl-mt-between-p{
+  p + p{
+    margin-top: 15px;
+  }
+}
+.kl-mt-between-li{
+  li + li{
+    margin-top: 10px;
+  }
+}
+.kl-p-strong-600{
+  p{
+    strong{
+      font-weight: $semi_bold;
+    }
+  }
+}
+.kl-p-strong-500{
+  p{
+    strong{
+      font-weight: $medium;
+    }
+  }
+}
+
+.kl-animate-scroll:not(.animate__animated),
+.kl-animate-items-scroll {
+  opacity: 0;
+}
+
+%bg-style{
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.kl-other-page {
+  flex-grow: 1;
+  padding-top: 118px;
+  padding-bottom: 150px;
+  position: relative;
+  z-index: 0;
+  &::before {
+    content: "";
+    background: url(../img/bg-other-page.png) $brown-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 386px;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    background: linear-gradient(180deg, rgba(241, 237, 233, 0.00) 0%, #F1EDE9 100%);
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    height: 306px;
+    z-index: -1;
+  }
+  @include media-breakpoint-down(md){
+    padding-top: 100px;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+body .kl-hero--page{
+  padding-bottom: 108px;
+  padding-top: 172px;
+}

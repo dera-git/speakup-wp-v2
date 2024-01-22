@@ -1,0 +1,480 @@
+%transition{
+    transition: all .5s;
+    transition-delay: .3s;
+}
+%text12{
+    font-size: 12px;
+    font-weight: $bold;
+}
+
+.kl-navbar{
+    padding: 0;
+}
+.kl-container-header{
+    padding: 25px 12px;
+}
+.kl-flex-md-w{
+    @include media-breakpoint-up(md){
+        flex: 0 0 auto;
+        width: 35%;
+    }
+}
+.kl-form-search{
+    input{
+        @extend %text12;
+        background-color: transparent !important;
+        color: $white !important;
+        border: none;
+        outline: none;
+        box-shadow: none !important;
+        padding: 5px 0 0 10px;
+        &:-moz-placeholder,
+        &::-moz-placeholder{
+            color: $white;
+        } 
+        &:-ms-input-placeholder{
+            color: $white;
+        }
+        &::-webkit-input-placeholder,
+        &::placeholder{
+            color: $white;
+        }
+    }
+}
+.kl-navbar-toggler{
+    padding: 0;
+    margin-right: 26px;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    font-family: $primary;
+    display: flex;
+    align-items: center;
+    color: $white;
+    & > div{
+        width: 14px;
+    }
+    .kl-text-toggler{
+        @extend %text12;
+        display: block;
+        position: relative;
+        top: 2px;
+        margin-left: 8px;
+        // @extend %transition;
+    }
+    .kl-toggler-icon{
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 10px;
+        background: $white;
+        transform: translateX(0);
+        transition: all .5s;
+        transition-delay: .2s;
+        & + .kl-toggler-icon{
+            margin-top: 3px;
+        }
+    }
+    &[aria-expanded="true"]{
+        .kl-toggler-icon{
+            background: $black;
+            &:first-of-type {
+                transform: translateY(6px)
+                  rotate(45deg);
+            }
+            &:nth-child(2) {
+                transform: scaleX(0);
+            }
+            &:last-of-type {
+                transform: translateY(-4px)
+                  rotate(-45deg);
+            }
+        }
+        .kl-text-toggler{
+            color: $black;
+        }
+        & ~ .kl-form-search{
+            input{
+                color: $black !important;
+                &:-moz-placeholder,
+                &::-moz-placeholder{
+                    color: $black;
+                } 
+                &:-ms-input-placeholder{
+                    color: $black;
+                }
+                &::-webkit-input-placeholder,
+                &::placeholder{
+                    color: $black;
+                }
+            }
+            svg{
+                path{
+                    fill: $black;
+                }
+            }
+        }
+    }
+}
+
+.kl-dropdown-translate{
+    margin-right: 50px;
+    .kl-icon-world{
+        position: absolute;
+        left: 0;
+        top: 2px;
+        line-height: 1;
+    }
+    button{
+        @extend %text12;
+        color: $white !important;
+        text-transform: uppercase;
+        padding: 3px 0 0 22px;
+        border: none;
+        line-height: 21px;
+        &::after{
+            display: none;
+        }
+        svg{
+            position: relative;
+            top: -2px;
+        }
+    }
+    ul{
+        min-width: 70px;
+        border: none;
+        background-color: $beige;
+        a{
+            @extend %text12;
+            text-transform: uppercase;
+            padding-top: 8px;
+        }
+    }
+}
+
+//weglot switcher
+.country-selector {
+    z-index: 1;
+    &.weglot-dropdown {
+        background-color: transparent;
+        .wgcurrent {
+            border: none;
+            color: $white;
+            .is-sticky & {
+                color: $black;
+            }
+            &::after {
+                content: "\f078";
+                background: none;
+                font-size: 10px;
+                top: 1px;
+                right: 2px;
+                transform: rotate(0);
+                font-family: "Font Awesome 6 Pro";
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                line-height: 1;
+                text-rendering: auto;
+            }
+            a, span {
+                height: auto;
+                line-height: 1;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        a, span {
+            font-size: 12px;
+            font-weight: $bold;
+        }
+        input:checked ~ .wgcurrent::after {
+            transform: scaleY(-1) translateY(-2px);
+        }
+        ul {
+            margin-top: 7px;
+        }
+    }
+  }
+
+.kl-social-networks{
+    li{
+        & + li{
+            margin-left: 20px;
+        }
+    }
+    a{
+        svg{
+            path{
+                transition: all .35s;
+            }
+        }
+    }
+}
+.kl-social-networks-black{
+    a{
+        &:hover{
+            svg{
+                path{
+                    fill: $red;
+                }
+            }
+        }
+    }
+}
+.kl-navbar-collapse{
+    transition: height .8s;
+    transition-delay: .2s;
+    z-index: 12;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &.show{
+        transition-delay: 0s;
+    }
+    .kl-nav-item{
+        & + .kl-nav-item{
+            margin-top: 35px;
+            @include media-breakpoint-down(md){
+                margin-top: 22px;
+            }
+        }
+        .dropdown-menu{
+            .kl-nav-item{
+                margin-top: 0 !important;
+                & + .kl-nav-item{
+                    margin-top: 0 !important;
+                }
+            }
+        }
+        .nav-link{
+            color: $black;
+            font-size: 30px;
+            font-weight: $bold;
+            line-height: 32px;
+            transition: all .25s;
+            position: relative;
+            padding: 0;
+            @include media-breakpoint-down(md){
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &::after{
+                display: none;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                background: $black;
+                width: 0;
+                height: 2px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all .25s;
+            }
+            &:hover,
+            &.active{
+                color: $red;
+                padding-left: 42px;
+                &::before{
+                    width: 30px;
+                }
+            }
+            &.kl-dropdown-toggle{
+                pointer-events: none;
+                &.active{
+                    color: $black;
+                    padding-left: 0;
+                }
+                &::before{
+                    content: none;
+                }
+            }
+        }
+        .dropdown-menu{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: transparent;
+            border: none;
+            margin-left: -20px;
+            li{
+                .dropdown-item{
+                    @extend %text12;
+                    color: $black;
+                    padding: 4px 20px;
+                    transition: all .25s;
+                    &:hover,
+                    &.active{
+                        color: $red;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+.kl-navbar-nav{
+    width: 435px;
+    height: calc(100vh - 200px);
+    min-width: 435px;
+    padding-top: 10px;
+}
+
+.kl-bg-mega-menu,
+.kl-image-banner{ 
+    position: absolute;
+    top: 0;
+    z-index: 11;
+}
+.kl-bg-mega-menu{
+    height: 0;
+    width: 100%;
+    transition: height .4s;
+    width: 100vw;
+    left: 0;
+    @include media-breakpoint-up(lg){
+        width: 476px;
+    }
+    @include media-breakpoint-up(xl){
+        width: 576px;
+    }
+    @include media-breakpoint-up(xxl_1600){
+        width: 810px;
+    }
+}
+.kl-image-banner{
+    transition: transform .4s;
+    transition-delay: .3s;
+    transform: translateY(-100%);
+    height: 100vh;
+    right: 0;
+    @include media-breakpoint-up(lg){
+        width: calc(100vw - 476px);
+    }
+    @include media-breakpoint-up(xl){
+        width: calc(100vw - 576px);
+    }
+    @include media-breakpoint-up(xxl_1600){
+        width: calc(100vw - 810px);
+    }
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+}
+.kl-h-100{
+    height: 100vh;
+}
+.kl-transform{
+    transform: translateY(0);
+}
+.kl-if-menu-show{
+    position: absolute;
+    right: 12px;
+    top: 25px;
+    text-align: right;
+    z-index: 12;
+}
+
+.kl-footer-sub-menu{
+    .kl-dropdown-translate{
+        button{
+            color: $black !important;
+        }
+        .country-selector.weglot-dropdown .wgcurrent {
+            color: $black;
+        }
+    }
+}
+
+.kl-logo-header{
+    @include media-breakpoint-down(sm){
+        flex: 0 0 auto;
+        width: 164px;
+    }
+}
+
+.kl-header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    .kl-logo-white{
+        display: block;
+    }
+    .kl-logo-color{
+        display: none;
+    }
+    &.is-sticky{
+        position: fixed;
+        background: $beige;
+        animation: slideDown 0.35s ease-out;
+        .kl-logo-white{
+            display: none;
+        }
+        .kl-logo-color{
+            display: block;
+        }
+        .kl-dropdown-translate svg path,
+        .kl-form-search button svg path{
+            fill: $black;
+        }
+        .kl-navbar-toggler{
+            .kl-toggler-icon{
+                background: $black;
+            }
+            .kl-text-toggler{
+                color: $black;
+            }
+        }
+        .kl-form-search{
+            input{
+                color: $black;
+                &:-moz-placeholder,
+                &::-moz-placeholder{
+                    color: $black;
+                } 
+                &:-ms-input-placeholder{
+                    color: $black;
+                }
+                &::-webkit-input-placeholder,
+                &::placeholder{
+                    color: $black;
+                }
+            }
+        }
+        .kl-dropdown-translate{
+            button{
+                color: $black !important;
+            }
+        }
+        .kl-social-networks{
+            a{
+                svg{
+                    path{
+                        fill: $black;
+                        transition: all .25s;
+                    }
+                }
+                &:hover{
+                    svg{
+                        path{
+                            fill: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}

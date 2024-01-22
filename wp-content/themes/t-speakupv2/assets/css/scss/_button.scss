@@ -1,0 +1,193 @@
+%button-style{
+    font-weight: $bold;
+    color: $white;
+    line-height: 14px;
+    position: relative;
+    text-align: center;
+}
+.kl-btn-theme{
+    @extend %button-style;
+    font-size: 14px;
+    padding: 13px 10px 11px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid $white;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: $white;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    svg{
+        top: -2px;
+        position: relative;
+        path{
+            transition: 0.5s ease-in-out;
+        }
+    }
+    &:hover {
+        color: $red;
+        span {
+            width: 225%;
+            height: 562.5px;
+        }
+        svg{
+            path{
+                fill: $red;
+            }
+        }
+    }
+    &:active {
+        background-color: $red;
+    }
+    &.kl-btn-view-more{
+        &:hover {
+            color: $red !important;
+            border: 1px solid $white !important;
+            svg{
+                path{
+                    fill: $red;
+                }
+            }
+        }
+    }
+}
+
+.kl-btn-hover-blue{
+    &:hover{
+        color: $green-secondary;
+        svg{
+            path{
+                fill: $green-secondary;
+            }
+        }
+    }
+}
+
+.kl-btn-theme02{
+    @extend %button-style;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 10px 10px;
+    display: inline-block;
+    position: relative;
+    border: none;
+    width: auto;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    background-color: transparent !important;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: #B17461;
+        transform:scaleX(1);
+        transition: transform .3s ease-in-out;
+        z-index: -1;
+    }
+    svg{
+        margin-left: -9px;
+        margin-top: -4px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    &:hover{
+        &::before{
+            transform: scaleX(1.065);
+        }
+        svg{
+            margin-left: 10px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.kl-btn-theme03{
+    position: relative;
+    width: auto; 
+    height: auto;
+    background-color: transparent;
+    border: none;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 50%; 
+        height: 1px;
+        z-index: 2;
+        bottom: 0;
+        transition: width 0.2s 0.35s ease-out;
+    }
+    &::before {
+        right: 50%;
+    }
+    &::after {
+        left: 50%;
+    }
+    &:hover::before,
+    &:hover::after {
+        width: 50%;
+        transition: width 0.2s ease-in;   
+    }
+
+    span{         
+        position: relative;
+        display: inline-block;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        padding: 12.5px 12px;
+        transition: 0.3s;  
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: 0%; 
+            height: 0%;
+            background: transparent;
+            opacity: 0;
+            bottom: 0; 
+            z-index: 2;
+            transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s 0.35s;
+        }
+        &::before { 
+            left: 0;
+        }
+        &::after { 
+            right: 0;   
+        }
+        &:hover::before,
+        &:hover::after {
+            width: 50%; 
+            height: 96%;
+            opacity: 1;
+            transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;   
+        }
+    }
+}
+.kl-form-check{
+    input:checked{
+        & + label{
+            span{
+                &::before,
+                &::after {
+                    width: 50%; 
+                    height: 96%;
+                    opacity: 1;
+                    transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;   
+                }
+            }
+        }
+    }
+}

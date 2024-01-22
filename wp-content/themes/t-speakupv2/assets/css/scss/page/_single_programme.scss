@@ -1,0 +1,275 @@
+.kl-sect-banner-programme{
+    position: relative;
+    img{
+        width: 100%;
+        @include media-breakpoint-down(md){
+            height: 350px;
+            object-fit: cover;
+        }
+    }
+}
+.kl-sect-about-programme{
+    padding: 116px 0 128px;
+    @include media-breakpoint-down(md){
+        padding: 56px 0 58px;
+    }
+    .kl-content-text-about{
+        padding: 44px 0;
+    }
+}
+
+.kl-sect-resource-programme{
+    padding: 173px 0 80px;
+    background: linear-gradient(180deg, #F1EDE9 0%, #ECB97B 49.48%, #F1EDE9 100%);
+    @include media-breakpoint-down(md){
+        padding: 63px 0 58px;
+    }
+}
+
+.kl-card-resources{
+    text-align: center;
+    margin-top: 0;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        margin-top: -25px;
+        transition: all 0.2s ease-in-out;
+    }
+    .kl-img-resource{
+        max-width: 240px;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        img{
+            max-width: 240px;
+            width: 100%;
+            max-height: 340px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    p{
+        margin: 20px 0 0;
+        font-family: $primary;
+        font-size: 12px;
+        font-weight: $medium;
+        min-height: 55px;
+        color: $black;
+    }
+
+    .kl-content-recourse{
+        text-decoration: none;
+    }
+    .kl-down-src-file{
+        text-decoration: none;
+        font-family: $primary;
+        font-size: 14px;
+        font-weight: $bold;
+        color: $purple_secondary;
+        text-transform: uppercase;
+    }
+}
+
+.kl-sect-contact-partenaire-programme{
+    padding: 30px 0 100px;
+    .kl-content-contact{
+        margin-right: auto;
+        @include media-breakpoint-down(md){
+            margin-left: auto;
+        }
+        h4{
+            font-size: 18px;
+            font-weight: $bold;
+            font-family: $primary;
+            margin: 45px 0 10px;
+        }
+        p{
+            font-size: 16px;
+            font-family: $primary;
+            margin-bottom: 10px;
+        }
+    }
+}
+.kl-partener-programme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    max-width: 208px;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    background: $white;
+    transition: all 0.3s ease-in-out;
+    @include media-breakpoint-down(md){
+        margin-left: auto;
+    }
+    img{
+        max-width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+    &.mx-h-132{
+        max-height: 132px;
+        height: 100%;
+    }
+    &.mx-h-108{
+        max-height: 108px;
+        height: 100%;
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+.kl-hover-eye-purple-tertiary{
+    &:hover{
+        .kl-icon-eye-purple-tertiary{
+            &::before{
+                background: $purple_tertiary;
+                visibility: visible;
+                opacity: 1;
+            }
+            svg{
+                path{
+                    fill: $white;
+                }
+            }
+        }
+    }
+    .kl-icon-eye-purple-tertiary{
+        svg{
+            path{
+                fill: $purple_tertiary;
+            }
+        }
+    }
+}
+
+.kl-hover-eye-black{
+    &:hover{
+        .kl-icon-eye-black{
+            &::before{
+                background: $black;
+                visibility: visible;
+                opacity: 1;
+            }
+            svg{
+                path{
+                    fill: $white;
+                }
+            }
+        }
+    }
+    .kl-icon-eye-black{
+        svg{
+            path{
+                fill: $black;
+            }
+        }
+    }
+}
+
+.kl-content-list-partener{
+    position: relative;
+    &::before{
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: $black;
+        position: absolute;
+        top: 0;
+        left: -45px;
+        opacity: 0.1;
+        @include media-breakpoint-down(xl){
+            opacity: 0;
+        }
+    }
+}
+
+.kl-btn-custom-mw{
+    min-width: 365px;
+    @include media-breakpoint-down(md){
+        min-width: 260px;
+    }
+}
+.kl-sect-champion-programme{
+    padding: 10px 0 77px;
+}
+.kl-champion-item{
+    display: flex;
+    background: linear-gradient(90deg, #A48A67 0%, rgba(164, 138, 103, 0.02) 100%);
+    max-width: 517px;
+    width: 100%;
+    height: 276px;
+    padding: 30px 30px 30px 0;
+    gap: 23px;
+    margin-left: 40px;
+    @include media-breakpoint-down(md){
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-left: 0;
+    }
+    img{
+        max-width: 222px;
+        width: 100%;
+        height: 216px;
+        margin-left: -40px;
+        @include media-breakpoint-down(md){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .kl-detail-user-champion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 22px 0;
+        h4{
+            font-family: $primary;
+            font-size: 24px;
+            font-weight: $bold;
+            margin-bottom: 10px;
+        }
+        p{
+            font-family: $primary;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.kl-swiper-navigation-champion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    z-index: 999;
+    .kl-swiper-button-prev{
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(-1);
+    }
+    .swiper-button-disabled{
+        opacity: 0!important;
+    }
+    .kl-swiper-button-next{
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -10px;
+    }
+}
+.kl-h-150{
+    height: 150px;
+}

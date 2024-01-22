@@ -1,0 +1,36 @@
+.kl-hero-champions{
+    @include media-breakpoint-down(md){
+        padding-bottom: 84px !important;
+        padding-top: 146px !important;
+    }
+}
+.kl-section-list-champions{
+    padding-bottom: 210px;
+    @include media-breakpoint-down(md){
+        padding-bottom: 110px;
+    }
+}
+.kl-thumb-champions{
+    flex: 0 0 auto;
+    width: 128px;
+    height: 140px;
+    @include media-breakpoint-down(sm){
+        float: left;
+        margin-bottom: 15px;
+    }
+}
+.kl-name-champions{
+    line-height: 17.323px;
+    letter-spacing: 1.2px;
+}
+.kl-desc-champions{
+    p{
+        font-size: 13px;
+        line-height: 18px;
+        display: inline;
+    }
+}
+.kl-svg-quote{
+    position: relative;
+    top: -5px;
+}

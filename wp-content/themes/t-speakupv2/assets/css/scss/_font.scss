@@ -1,0 +1,256 @@
+//Spartan
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-Light.eot');
+    src: url('../fonts/spartan/Spartan-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-Light.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-Light.woff') format('woff'),
+        url('../fonts/spartan/Spartan-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-ExtraBold.eot');
+    src: url('../fonts/spartan/Spartan-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-ExtraBold.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-ExtraBold.woff') format('woff'),
+        url('../fonts/spartan/Spartan-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-Regular.eot');
+    src: url('../fonts/spartan/Spartan-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-Regular.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-Regular.woff') format('woff'),
+        url('../fonts/spartan/Spartan-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-Thin.eot');
+    src: url('../fonts/spartan/Spartan-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-Thin.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-Thin.woff') format('woff'),
+        url('../fonts/spartan/Spartan-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-ExtraLight.eot');
+    src: url('../fonts/spartan/Spartan-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-ExtraLight.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-ExtraLight.woff') format('woff'),
+        url('../fonts/spartan/Spartan-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-Black.eot');
+    src: url('../fonts/spartan/Spartan-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-Black.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-Black.woff') format('woff'),
+        url('../fonts/spartan/Spartan-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-Bold.eot');
+    src: url('../fonts/spartan/Spartan-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-Bold.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-Bold.woff') format('woff'),
+        url('../fonts/spartan/Spartan-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-Medium.eot');
+    src: url('../fonts/spartan/Spartan-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-Medium.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-Medium.woff') format('woff'),
+        url('../fonts/spartan/Spartan-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan';
+    src: url('../fonts/spartan/Spartan-SemiBold.eot');
+    src: url('../fonts/spartan/Spartan-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan/Spartan-SemiBold.woff2') format('woff2'),
+        url('../fonts/spartan/Spartan-SemiBold.woff') format('woff'),
+        url('../fonts/spartan/Spartan-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+//Spartan MB
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-Black.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-Black.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-Black.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-Regular.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-Regular.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-Regular.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-Medium.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-Medium.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-Medium.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-SemiBold.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-SemiBold.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-SemiBold.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-Light.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-Light.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-Light.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-ExtraBold.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-ExtraBold.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-ExtraBold.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-Bold.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-Bold.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-Bold.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-ExtraLight.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-ExtraLight.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-ExtraLight.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spartan MB';
+    src: url('../fonts/spartan-mb/SpartanMB-Thin.eot');
+    src: url('../fonts/spartan-mb/SpartanMB-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/spartan-mb/SpartanMB-Thin.woff2') format('woff2'),
+        url('../fonts/spartan-mb/SpartanMB-Thin.woff') format('woff'),
+        url('../fonts/spartan-mb/SpartanMB-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+//Better Times
+
+@font-face {
+    font-family: 'Better Times Alt';
+    src: url('../fonts/Better-Times/BetterTimesAlt.eot');
+    src: url('../fonts/Better-Times/BetterTimesAlt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Better-Times/BetterTimesAlt.woff2') format('woff2'),
+        url('../fonts/Better-Times/BetterTimesAlt.woff') format('woff'),
+        url('../fonts/Better-Times/BetterTimesAlt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Better Times Swash';
+    src: url('../fonts/Better-Times/BetterTimesSwash.eot');
+    src: url('../fonts/Better-Times/BetterTimesSwash.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Better-Times/BetterTimesSwash.woff2') format('woff2'),
+        url('../fonts/Better-Times/BetterTimesSwash.woff') format('woff'),
+        url('../fonts/Better-Times/BetterTimesSwash.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Better Times';
+    src: url('../fonts/Better-Times/BetterTimes.eot');
+    src: url('../fonts/Better-Times/BetterTimes.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Better-Times/BetterTimes.woff2') format('woff2'),
+        url('../fonts/Better-Times/BetterTimes.woff') format('woff'),
+        url('../fonts/Better-Times/BetterTimes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,47 @@
+.kl-filter-actus-link {
+  border: 1px solid transparent;
+  border-bottom-color: $orange-primary;
+  color: $black;
+  display: block;
+  font-size: 14px;
+  font-weight: $semi_bold;
+  line-height: 1.1;
+  padding: 15px 0 11px;
+  text-align: center;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border-color: $orange-primary;
+  }
+  &.active {
+    border-color: $orange-primary;
+    color: $orange-primary;
+  }
+}
+
+.kl-filter-actus-mobile {
+  .dropdown-toggle {
+    &::after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    border-radius: 0;
+  }
+  .dropdown-item {
+    font-size: 14px;
+    font-weight: $semi_bold;
+    &.active,
+    &:active {
+      background-color: $orange-primary;
+    }
+  }
+}
+
+.kl-custom-animate-list-actus {
+  @include media-breakpoint-down(lg) {
+    .animate__fadeInLeft,
+    .animate__fadeInRight {
+      animation-name: fadeInUp;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.kl-article-sidebar {
+  @include media-breakpoint-up(lg) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+  }
+}
+
+.kl-social-share {
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid $orange-primary;
+  position: relative;
+  .addtoany_shortcode{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    .addtoany_share{
+      display: none;
+    }
+  }
+  .addtoany_list{
+    display: flex;
+    flex-direction: column;
+    & > a{
+      margin-bottom: 0;
+      height: 100%;
+      position: relative;
+      padding: 9px 0;
+      font-size: 24px;
+      &::after {
+        content: "";
+        background-color: $orange-primary;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: opacity .15s ease-in-out;
+        z-index: -1;
+      }
+      &:hover {
+        &::after {
+          opacity: 0.2;
+        }
+      }
+      span{
+        opacity: 0 !important;
+      }
+    }
+  }
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba($orange-primary, 0.2);
+    font-weight: $medium;
+    margin-left: 17px;
+    margin-right: 17px;
+    padding: 0;
+    position: relative;
+    a{
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &::after {
+      content: "";
+      background-color: $orange-primary;
+      opacity: 0;
+      position: absolute;
+      top: -1px;
+      left: -17px;
+      right: -17px;
+      bottom: -1px;
+      transition: opacity .15s ease-in-out;
+      z-index: -1;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.2;
+      }
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  i {
+    font-size: 24px;
+    min-width: 24px;
+    margin-right: 6px;
+  }
+}
+
+.kl-article-block-content {
+  padding: 30px 20px 16px;
+  @include media-breakpoint-up(sm) {
+    padding: 36px 30px 20px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 48px 42px 20px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 57px 53px 26px;
+  }
+}
+
+.kl-gutenberg-content {
+  font-size: 14px;
+  line-height: 1.37;
+  p, ul {
+    margin-bottom: 12px;
+  }
+  strong, b {
+    font-weight: $semi_bold;
+  }
+  a {
+    color: $orange-primary;
+    font-weight: $semi_bold;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    p, ul {
+      margin-bottom: 15px;
+    }
+  }
+}

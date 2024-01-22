@@ -1,0 +1,102 @@
+.kl-body-notre-travail{
+    .kl-section-program{
+        padding-top: 0;
+    }
+}
+.kl-section-works{
+    @extend %bg-style;
+    background: url('../img/notre-travail/bg-notre-travail.svg');
+    background-position: bottom center !important;
+    width: 100%;
+    padding-top: 142px;
+    padding-bottom: 133px;
+    @include media-breakpoint-down(lg){
+        padding-top: 110px;
+        padding-bottom: 85px;
+    }
+    @include media-breakpoint-down(sm){
+        padding-bottom: 60px;
+    }
+}
+.kl-desc-works{
+    @include position_outside_container;
+    position: relative;
+    @include media-breakpoint-down(lg){
+        left: 0;
+        margin: auto;
+        max-width: 720px;
+    }
+    @include media-breakpoint-down(md){
+        max-width: 540px;
+    }
+    @include media-breakpoint-down(md){
+        max-width: 540px;
+    }
+    @include media-breakpoint-down(sm){
+        max-width: 100%;
+        padding: 0 12px;
+    }
+}
+.kl-image-works{
+    width: 92.6%;
+    height: 565px;
+    margin-left: auto;
+    @include media-breakpoint-down(lg){
+        width: 100%;
+        height: 510px;
+        img{
+            object-position: top;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        height: 363px;
+    }
+}
+.kl-section-thematiques-pro{
+    padding-top: 140px;
+    padding-bottom: 234px;
+    @include media-breakpoint-down(md){
+        padding-top: 60px;
+        padding-bottom: 112px;
+    }
+}
+
+.kl-hero-single-page{
+    @extend .kl-other-page;
+    padding-top: 95px;
+    padding-bottom: 70px;
+    @include media-breakpoint-down(sm){
+        padding-bottom: 45px;
+    }
+    &:before{
+        background-color: var(--before-color);
+        height: 100%;
+    }
+    &::after{
+        top: auto;
+        bottom: -3px;
+    }
+}
+.kl-link-return{
+    svg{
+        transform: none;
+        transition: transform .3s;
+    }
+    &:hover{
+        svg{
+            transform: translateX(-8px);
+        }
+    }
+}
+.kl-img-thumb-thematique{
+    @include media-breakpoint-down(lg){
+        width: 100px;
+        flex: 0 0 auto;
+    }
+}
+.kl-section-list-program{
+    padding-bottom: 200px;
+    @include media-breakpoint-down(md){
+        padding-bottom: 120px;
+    }
+}

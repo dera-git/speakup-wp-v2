@@ -1,0 +1,42 @@
+.kl-section-filter-ressource-thematique{
+    margin-top: 0;
+    padding-bottom: 100px;
+    .kl-form-check{
+        & + .kl-form-check{
+            margin-left: 19px;
+        }
+        label{
+            font-size: 12px;
+            font-weight: $semi_bold;
+            line-height: 16px;
+            color: $black;
+            padding: 12.5px 12px;
+            border-bottom: 1px solid var(--thematique-ressource-color);
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        input{
+            appearance: none;
+            opacity: 0;
+            visibility: hidden;
+            &:checked{
+                & + label{
+                    color: var(--thematique-ressource-color);
+                    border: 1px solid var(--thematique-ressource-color);
+                }
+            }
+        }
+    }
+}
+
+.kl-card-res-cat{
+    &:hover{
+        img{
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    img{
+        transition: all 0.3s ease-in-out;
+    }
+}
